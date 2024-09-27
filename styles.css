@@ -2,14 +2,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #eeaeca;
 }
 
 body{
     font-family: "Montserrat", sans-serif;
 }
 
-h1{
+h1, 
+h2{
     font-family: "DM Serif Display", serif;
     text-align: center;
+    padding: 30px;
+}
+
+#contenedor-ind1{
+    background: rgb(63,251,233);
+    background: radial-gradient(circle, rgba(63,251,233,1) 14%, rgba(183,70,252,1) 100%);
+}
+
+#contenedor-ind2{
+    background: rgb(251,63,162);
+    background: radial-gradient(circle, rgba(251,63,162,1) 14%, rgba(252,218,70,1) 100%);
 }

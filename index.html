@@ -3,17 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Mi página de Bootstrap</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <h1>¡Hola, soy Ivanna Saucedo!</h1>
+  <body style="background-color: #eeaeca;">
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <h1>¡Hola, soy Ivanna Saucedo!</h1>
+      <nav class="navbar navbar-expand-lg bg-body-$pink-200">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Ivanna</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,13 +22,13 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Carrusel de los recuerdos</a>
+                <a class="nav-link" aria-current="page" href="#carrusel-recuerdos">Carrusel de mi vida</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Sobre mí</a>
+                <a class="nav-link" href="#sobre-mi">Sobre mí</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Recomendaciones musicales</a>
+                <a class="nav-link" href="#recomendaciones-musicales">Recomendaciones musicales</a>
               </li>
             </ul>
           </div>
@@ -36,73 +36,94 @@
       </nav>
     </header>
     <main>
-      <div id="carouselExampleCaptions" class="carousel slide">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="..." class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>Some representative placeholder content for the first slide.</p>
+      <section id="carrusel-recuerdos">
+        <h2>El carrusel de mi vida.</h2>
+        <div id="carouselExampleDark" class="carousel carousel-dark slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <img src="/fotos/foto-ivi.jpg" class="d-block mx-auto opacity-75 img-fluid" alt="Foto de Ivanna, solo se ve su cara">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Esta soy yo, Ivanna.</h5>
+                <p>Tengo 24 años y soy bióloga de corazón y desarrolladora por convicción, no soy una sin la otra.</p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="fotos/yo-con-mis-papis.jpg" class="d-block w-100 opacity-75 img-fluid" alt="Ivanna con su papá y su mamá">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Mi familia</h5>
+                <p>Ellos son mis papás, quienes me acompañan en mi camino y me han brindado todas las herramientas para convertirme en quién soy.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="fotos/ivi-y-gary.JPG" class="d-block w-100 opacity-75 img-fluid" alt="Ivanna y su novio Gary">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Gary Neville, mi novio</h5>
+                <p>Él es mi apoyo, mi compañía, y el cariño que nunca me falta, quizás somos muy diferentes pero eso hace que nos complementemos y aprendamos del otro.</p>
+              </div>
             </div>
           </div>
-          <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>Some representative placeholder content for the second slide.</p>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+      <section id="sobre-mi">
+        <h2>Sobre mí</h2>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-sm-8 col-lg-6 p-4" id="contenedor-ind1">
+              <p>Esta es Rufina mi gata, tiene 4 años y tiene apego hacia mí porque llegó durante la pandemia. </p>
+              <img src="fotos/Rufina.JPG" alt="" class="d-block w-50 mx-auto  img-fluid rounded-4">
+            </div>
+            <div class="col-sm-8 col-lg-6 p-4" id="contenedor-ind2">
+              <p>Mi top conciertos a los que he ido:</p>
+              <ol>
+                <li>Corona Capital - 2022</li>
+                <li>Tecate Pa'l Norte - 2024</li>
+                <li>Mitski - 2024</li>
+                <li>Arctic Monkeys - 2023</li>
+                <li>Lana Del Rey - 2023</li>
+              </ol>
+            </div>
+            <div class="col-sm-8 col-lg-6 p-4" id="contenedor-ind2">
+              <p>Datos random sobre mí:</p>
+              <ul>
+                <li>Soy hija única, lo que vuelve mi vida un poco más solitaria.</li>
+                <li>Tengo miedo a los payasos, botargas, y maniquís.</li>
+                <li>Me sobreestimulo con facilidad, con olores, luces y texturas.</li>
+                <li>Me dan vértigo las alturas, sin embargo me gustan mucho las montañas rusas y estar en lo alto.</li>
+                <li>Así como me gusta aprender a hacer muchas cosas, también pierdo la atención con facilidad y las abandono.</li>
+              </ul>
+            </div>
+            <div class="col-sm-8 col-lg-6 p-4" id="contenedor-ind1">
+              Este es Steve, mi gecko leopardo, tiene 7 años conmigo y es muy tranquilo, le encantan los gusanos.
+              <img src="fotos/stevecito.jpg" alt="" class="d-block w-50 mx-auto  img-fluid rounded-4">
             </div>
           </div>
-          <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
-            </div>
+        </div>
+      </section>
+      <section id="recomendaciones-musicales">
+        <h2>Mis recomendaciones musicales</h2>
+        <div class="card" style="width: 18rem; background-color: rgb(160, 188, 240);">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-      <div class="container text-center">
-        <div class="row">
-          <div class="col">
-            Column
-          </div>
-          <div class="col">
-            Column
-          </div>
-          <div class="col">
-            Column
-          </div>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-      <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="d-flex">
-          <div class="toast-body">
-            Hello, world! This is a toast message.
-          </div>
-          <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-        </div>
-      </div>
+      </section>
+      
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
