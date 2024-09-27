@@ -24,3 +24,7 @@ h2{
     background: rgb(251,63,162);
     background: radial-gradient(circle, rgba(251,63,162,1) 14%, rgba(252,218,70,1) 100%);
 }
+
+.btn{
+    background-color: lightskyblue;
+}
